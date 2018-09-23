@@ -40,8 +40,8 @@ function updateText(data){
     editor.selection.setAfter(data.selection);
     editor.selection.restore();
     
-    $('#text').froalaEditor('selection.setAfter', data.selection);
-    $('#text').froalaEditor('selection.restore');
+   // $('#text').froalaEditor('selection.setAfter', data.selection);
+   // $('#text').froalaEditor('selection.restore');
     //editor.selection.setAtEnd(editor.$el.get(0));
     //editor.selection.restore();
 }
