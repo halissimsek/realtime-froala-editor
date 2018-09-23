@@ -25,8 +25,8 @@ function updateText(data){
     text.text = data.text;
     $("#text").froalaEditor('html.set', data.text);
     var editor = $('#text').data('froala.editor');
-    editor.selection.setAtEnd(editor.$el.get(0));
-    editor.selection.restore();
+    //editor.selection.setAtEnd(editor.$el.get(0));
+    //editor.selection.restore();
 }
 
 function handleRecievedText(data){
@@ -34,8 +34,11 @@ function handleRecievedText(data){
     text.text = data.text;
     $("#text").froalaEditor('html.set', data.text);
     var editor = $('#text').data('froala.editor');
-    editor.selection.setAtEnd(editor.$el.get(0));
-    editor.selection.restore();
+    //editor.selection.setAtEnd(editor.$el.get(0));
+   // editor.selection.restore();
+
+    $('#text').froalaEditor('selection.setAfter', $('#text').froalaEditor('selection.blocks'));
+    $('#text').froalaEditor('selection.restore');
 }
 
 
