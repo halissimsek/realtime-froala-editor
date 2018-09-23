@@ -37,6 +37,8 @@ function updateText(data){
     text.text = data.text;
     $("#text").froalaEditor('html.set', data.text);
     var editor = $('#text').data('froala.editor');
+    editor.selection.setAfter(data.selection);
+    editor.selection.restore();
     
     $('#text').froalaEditor('selection.setAfter', data.selection);
     $('#text').froalaEditor('selection.restore');
